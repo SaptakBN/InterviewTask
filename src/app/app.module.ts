@@ -35,7 +35,7 @@ import { StorageService } from './Services/storage.service';
     HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      
+      preventDuplicates:true
     })
   ],
   providers: [
