@@ -4,7 +4,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="fname" class="form-label my-auto">First name</label>
         <div class="w-75 ms-auto abs">
-          <input type="text" class="form-control border-primary w-100 ms-auto" id="fname" formControlName="fname">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="fname" formControlName="fname" placeholder="First name should be title case">
           <ng-container *ngIf="regForm.get('fname')?.touched">
             <ng-container *ngIf="regForm.get('fname')?.hasError('required')">
               <p class="error">Please enter your first name.</p>
@@ -14,12 +14,12 @@
       </div>
       <div class="my-3 d-flex justify-content-between">
         <label for="mname" class="form-label my-auto">Middle name</label>
-        <input type="text" class="form-control border-primary w-75" id="mname" formControlName="mname">
+        <input type="text" class="form-control border-primary w-75" id="mname" formControlName="mname"placeholder="Optional">
       </div>
       <div class="my-3 d-flex justify-content-between">
         <label for="lname" class="form-label my-auto">Last name</label>
         <div class="w-75 ms-auto abs">
-          <input type="text" class="form-control border-primary w-100 ms-auto" id="lname" formControlName="lname">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="lname" formControlName="lname" placeholder="Last name should be title case">
           <ng-container *ngIf="regForm.get('lname')?.touched">
             <ng-container *ngIf="regForm.get('lname')?.hasError('required')">
               <p class="error">Please enter your Last name.</p>
@@ -30,7 +30,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="mail" class="form-label my-auto">Email address</label>
         <div class="w-75 ms-auto abs">
-          <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail">
+          <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail" placeholder="Email format (example: abc@gmail.com)">
           <ng-container *ngIf="regForm.get('mail')?.touched">
             <ng-container *ngIf="regForm.get('mail')?.hasError('required')">
               <p class="error">Please enter your email Id.</p>
@@ -61,7 +61,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="ph" class="form-label my-auto">Phone number</label>
         <div class="w-75 ms-auto abs">
-          <input type="text" class="form-control border-primary w-100 ms-auto" id="ph" formControlName="ph">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="ph" formControlName="ph" placeholder="10 numeric digits">
           <ng-container *ngIf="regForm.get('ph')?.touched">
             <ng-container *ngIf="regForm.get('ph')?.hasError('required')">
               <p class="error">Please enter your phone number.</p>
@@ -75,7 +75,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="adrs" class="form-label my-auto">Address</label>
         <div class="w-75 ms-auto abs">
-          <input type="text" class="form-control border-primary w-100 ms-auto" id="adrs" formControlName="adrs">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="adrs" formControlName="adrs" placeholder="Required">
           <ng-container *ngIf="regForm.get('adrs')?.touched">
             <ng-container *ngIf="regForm.get('adrs')?.hasError('required')">
               <p class="error">Please enter your address.</p>
@@ -86,7 +86,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="pword" class="form-label my-auto">Password</label>
         <div class="w-75 ms-auto abs">
-          <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword">
+          <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword" placeholder="Min 8 char (mix of upper lower, num, and special char)">
           <ng-container *ngIf="regForm.get('pword')?.touched">
             <ng-container *ngIf="regForm.get('pword')?.hasError('required')">
               <p class="error">Please enter your password.</p>
@@ -100,7 +100,7 @@
       <div class="my-3 d-flex justify-content-between">
         <label for="cpword" class="form-label my-auto">Confirm password</label>
         <div class="w-75 ms-auto abs">
-          <input type="password" class="form-control border-primary w-100 ms-auto" id="cpword" formControlName="cpword">
+          <input type="password" class="form-control border-primary w-100 ms-auto" id="cpword" formControlName="cpword" placeholder="Password and Confirm password need to match">
           <ng-container *ngIf="regForm.get('cpword')?.touched">
             <ng-container *ngIf="regForm.get('cpword')?.hasError('required')">
               <p class="error">Please confirm your password.</p>

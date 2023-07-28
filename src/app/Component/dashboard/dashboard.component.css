@@ -2,3 +2,7 @@ a{
   text-decoration: none;
   color: darkblue;
 }
+tr:hover{
+  background-color: rgb(104, 255, 255);
+  cursor: pointer;
+}

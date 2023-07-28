@@ -5,7 +5,7 @@
         <div class="my-3 d-flex justify-content-between">
           <label for="mail" class="form-label my-auto">Email address</label>
           <div class="w-75 ms-auto">
-            <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail">
+            <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail" placeholder="Email format (example: abc@gmail.com)">
             <ng-container *ngIf="logInForm.get('mail')?.touched">
               <ng-container *ngIf="logInForm.get('mail')?.hasError('required')">
                 <p class="error">Please enter your email Id.</p>
@@ -19,7 +19,7 @@
         <div class="my-3 d-flex justify-content-between">
           <label for="pword" class="form-label my-auto">Password</label>
           <div class="w-75 ms-auto">
-            <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword">
+            <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword" placeholder="Min 8 char (mix of upper lower, num, and special char)">
             <ng-container *ngIf="logInForm.get('pword')?.touched">
               <ng-container *ngIf="logInForm.get('pword')?.hasError('required')">
                 <p class="error">Please enter your password.</p>

@@ -10,11 +10,11 @@
         </thead>
         <tbody class="bg-info-subtle text-dark text-center fs-6">
           <ng-container *ngFor="let user of allUser">
-            <tr class="">
-              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.fname }}</a></td>
-              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.lname }}</a></td>
-              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.gender }}</a></td>
-              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.mail }}</a></td>
+            <tr class="" routerLink="details" [queryParams]="{mail:user?.mail}">
+              <td class="p-2">{{ user?.fname }}</td>
+              <td class="p-2">{{ user?.lname }}</td>
+              <td class="p-2">{{ user?.gender }}</td>
+              <td class="p-2">{{ user?.mail }}</td>
             </tr>
           </ng-container>
         </tbody>
