@@ -1,0 +1,39 @@
+
+  <form class="my-auto" (ngSubmit)="onSubmit()" [formGroup]="logInForm">
+    <div class="card col-5 p-5 mx-auto my-5 border-dark">
+      <h1 class="text-center mb-4 fw-light" >Log In Form</h1>
+        <div class="my-3 d-flex justify-content-between">
+          <label for="mail" class="form-label my-auto">Email address</label>
+          <div class="w-75 ms-auto">
+            <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail">
+            <ng-container *ngIf="logInForm.get('mail')?.touched">
+              <ng-container *ngIf="logInForm.get('mail')?.hasError('required')">
+                <p class="error">Please enter your email Id.</p>
+              </ng-container>
+              <ng-container *ngIf="logInForm.get('mail')?.hasError('email')">
+                <p class="error">Incorrect email format.</p>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+        <div class="my-3 d-flex justify-content-between">
+          <label for="pword" class="form-label my-auto">Password</label>
+          <div class="w-75 ms-auto">
+            <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword">
+            <ng-container *ngIf="logInForm.get('pword')?.touched">
+              <ng-container *ngIf="logInForm.get('pword')?.hasError('required')">
+                <p class="error">Please enter your password.</p>
+              </ng-container>
+              <ng-container *ngIf="logInForm.get('pword')?.hasError('pattern')">
+                <p class="error">Password format incorrect</p>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
+        <div class="ms-auto">
+          <button type="submit" class="btn btn-lg btn-outline-primary" [disabled]="logInForm.invalid">Submit</button>
+        </div>
+    </div>
+  </form>
+
+

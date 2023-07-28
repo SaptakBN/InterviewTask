@@ -1,0 +1,24 @@
+<ng-container *ngIf="loggedIn()">
+  <div class="container mx-auto my-5">
+    <div class="col-6 mx-auto my-5">
+      <table class="w-100 mx-auto">
+        <thead class="bg-danger text-light fw-light fs-5 text-center" >
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Gender</th>
+          <th>Email</th>
+        </thead>
+        <tbody class="bg-info-subtle text-dark text-center fs-6">
+          <ng-container *ngFor="let user of allUser">
+            <tr class="">
+              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.fname }}</a></td>
+              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.lname }}</a></td>
+              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.gender }}</a></td>
+              <td class="p-2"><a routerLink="details" [queryParams]="{mail:user?.mail}">{{ user?.mail }}</a></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-container>

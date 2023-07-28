@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "fname": "Saptak",
+      "mname": "",
+      "lname": "Banerjee",
+      "mail": "saptakb738@gmail.com",
+      "gender": "Male",
+      "ph": "9836438819",
+      "adrs": "133F Raja Rajendra Lal Mitra Road, Phoolbagan, Beleghata",
+      "token": "bb8dd071-0206-4e06-ab82-963f6bd57699",
+      "id": 1,
+      "pword": "Cr7manutd~"
+    },
+    {
+      "fname": "Sagarika",
+      "mname": "",
+      "lname": "Podder",
+      "mail": "sagar@gmail.com",
+      "gender": "Female",
+      "ph": "8777206890",
+      "adrs": "513F KBKC",
+      "pword": "Sagar1234~",
+      "token": "8e58266b-7976-433f-8064-a06b0230dd9f",
+      "id": 2
+    },
+    {
+      "fname": "Rohit",
+      "mname": "",
+      "lname": "Nandi",
+      "mail": "rohit@gmail.com",
+      "gender": "Male",
+      "ph": "6546515121",
+      "adrs": "5616 Jjnas",
+      "pword": "Rohit1234~",
+      "token": "bfecbb40-c388-488a-804e-4c4dc496662f",
+      "id": 3
+    }
+  ]
+}

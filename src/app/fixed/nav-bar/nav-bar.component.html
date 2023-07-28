@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-info bg-info" aria-label="Ninth navbar example">
+  <div class="container-xl">
+    <a class="navbar-brand" href="#">InterviewTask</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample07XL">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="dashboard">Dash board</a>
+        </li>
+      </ul>
+      <ng-container *ngIf="loggedIn()">
+        <button class="btn btn-danger me-2" (click)="logOut()">Log Out</button>
+      </ng-container>
+      <ng-container *ngIf="!loggedIn()">
+        <button class="btn btn-primary me-2" routerLink="log-in">Log In</button>
+        <button class="btn btn-light" routerLink="reg">Registration</button>
+      </ng-container>
+    </div>
+  </div>
+</nav>

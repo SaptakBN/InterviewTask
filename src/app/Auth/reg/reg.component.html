@@ -1,0 +1,118 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="regForm">
+  <div class="card col-6 p-5 mx-auto my-5 border-dark">
+    <h1 class="text-center mb-4 fw-light" >Registration Form</h1>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="fname" class="form-label my-auto">First name</label>
+        <div class="w-75 ms-auto abs">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="fname" formControlName="fname">
+          <ng-container *ngIf="regForm.get('fname')?.touched">
+            <ng-container *ngIf="regForm.get('fname')?.hasError('required')">
+              <p class="error">Please enter your first name.</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="mname" class="form-label my-auto">Middle name</label>
+        <input type="text" class="form-control border-primary w-75" id="mname" formControlName="mname">
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="lname" class="form-label my-auto">Last name</label>
+        <div class="w-75 ms-auto abs">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="lname" formControlName="lname">
+          <ng-container *ngIf="regForm.get('lname')?.touched">
+            <ng-container *ngIf="regForm.get('lname')?.hasError('required')">
+              <p class="error">Please enter your Last name.</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="mail" class="form-label my-auto">Email address</label>
+        <div class="w-75 ms-auto abs">
+          <input type="email" class="form-control border-primary w-100 ms-auto" id="mail" formControlName="mail">
+          <ng-container *ngIf="regForm.get('mail')?.touched">
+            <ng-container *ngIf="regForm.get('mail')?.hasError('required')">
+              <p class="error">Please enter your email Id.</p>
+            </ng-container>
+            <ng-container *ngIf="regForm.get('mail')?.hasError('email')">
+              <p class="error">Incorrect email format.</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-2 d-flex">
+        <label for="gender" class="form-label my-auto">Gender</label>
+        <div class="d-flex ms-5">
+          <div class="form-check ms-5 ps-5">
+            <input class="form-check-input border-primary" value="Male" type="radio"  id="male" formControlName="gender">
+            <label class="form-check-label" for="male">
+              Male
+            </label>
+          </div>
+          <div class="form-check ms-5">
+            <input class="form-check-input border-primary" value="Female" type="radio" na id="female" formControlName="gender">
+            <label class="form-check-label" for="female">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="ph" class="form-label my-auto">Phone number</label>
+        <div class="w-75 ms-auto abs">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="ph" formControlName="ph">
+          <ng-container *ngIf="regForm.get('ph')?.touched">
+            <ng-container *ngIf="regForm.get('ph')?.hasError('required')">
+              <p class="error">Please enter your phone number.</p>
+            </ng-container>
+            <ng-container *ngIf="regForm.get('ph')?.hasError('pattern')">
+              <p class="error">Phone number must contain 10 digits</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="adrs" class="form-label my-auto">Address</label>
+        <div class="w-75 ms-auto abs">
+          <input type="text" class="form-control border-primary w-100 ms-auto" id="adrs" formControlName="adrs">
+          <ng-container *ngIf="regForm.get('adrs')?.touched">
+            <ng-container *ngIf="regForm.get('adrs')?.hasError('required')">
+              <p class="error">Please enter your address.</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="pword" class="form-label my-auto">Password</label>
+        <div class="w-75 ms-auto abs">
+          <input type="password" class="form-control border-primary w-100 ms-auto" id="pword" formControlName="pword">
+          <ng-container *ngIf="regForm.get('pword')?.touched">
+            <ng-container *ngIf="regForm.get('pword')?.hasError('required')">
+              <p class="error">Please enter your password.</p>
+            </ng-container>
+            <ng-container *ngIf="regForm.get('pword')?.hasError('pattern')">
+              <p class="error">Password format incorrect</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="my-3 d-flex justify-content-between">
+        <label for="cpword" class="form-label my-auto">Confirm password</label>
+        <div class="w-75 ms-auto abs">
+          <input type="password" class="form-control border-primary w-100 ms-auto" id="cpword" formControlName="cpword">
+          <ng-container *ngIf="regForm.get('cpword')?.touched">
+            <ng-container *ngIf="regForm.get('cpword')?.hasError('required')">
+              <p class="error">Please confirm your password.</p>
+            </ng-container>
+            <ng-container *ngIf="regForm.get('pword')?.value!=regForm.get('cpword')?.value">
+              <p class="error">Password mismatch.</p>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+      <div class="mx-auto my-2 ">
+        <button type="submit" class="btn btn-lg btn-outline-primary" [disabled]="regForm.invalid">Submit</button>
+      </div>
+  </div>
+</form>
